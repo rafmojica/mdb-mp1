@@ -16,7 +16,7 @@ const GameScreen = ({ navigation }) => {
     const randomIndex = Math.floor(Math.random() * wordSetLength); // get random index on mount
     setWordSet(wordSets[randomIndex]); // get word set and store it
     setSelectedMemberId(0); // reset selected member id
-  })
+  }, [])
 
   return (
     <View>
