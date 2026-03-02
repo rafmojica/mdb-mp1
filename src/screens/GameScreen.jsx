@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { View, Text } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import { wordSets } from "../data/wordSets.ts";
+import { members } from "../data/members.ts";
+import MemberCard from '../components/MemberCard.jsx'
 
 const GameScreen = ({ navigation }) => {
   const [selectedMemberId, setSelectedMemberId] = useState();
@@ -20,7 +22,20 @@ const GameScreen = ({ navigation }) => {
 
   return (
     <View>
-      <Text>Game Screen</Text>
+      <FlatList
+        data={members}
+        numColumns={3}
+        keyExtractor={(member) => member.id.toString()}
+        renderItem={({ item, index }) => (
+          <MemberCard
+            image={item.image}
+            name={item.name}
+            word={wordSet.words?.[index]}
+            isSelected={selectedMemberId === item.id}
+            onPress={() => setSelectedMemberId(item.id)}
+          />
+        )}
+      />
     </View>
   );
 };

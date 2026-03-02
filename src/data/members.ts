@@ -52,7 +52,7 @@ export const members = [
   {
     id: 11,
     name: "Jessie",
-    image: require("../assets/jessie.png"),
+    image: require("../assets/jessie.jpg"),
   },
   {
     id: 12,

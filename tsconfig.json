@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-, "src/screens/StartScreen.jsx", "src/screens/GameScreen.jsx", "src/screens/ResultScreen.jsx"  ]
+, "src/screens/StartScreen.jsx", "src/screens/GameScreen.jsx", "src/screens/ResultScreen.jsx", "src/components/MemberCard.jsx"  ]
 }
