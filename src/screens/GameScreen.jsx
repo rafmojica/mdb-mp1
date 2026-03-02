@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, Text } from "react-native";
-import wordSets from "../data/wordSets";
+import { wordSets } from "../data/wordSets.ts";
 
 const GameScreen = ({ navigation }) => {
   const [selectedMemberId, setSelectedMemberId] = useState();
@@ -10,7 +10,7 @@ const GameScreen = ({ navigation }) => {
   // randomly select indexes
   // Math.floor(Math.random() * range);
 
-  const wordSetLength = wordSets.length();
+  const wordSetLength = wordSets.length;
 
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * wordSetLength); // get random index on mount
